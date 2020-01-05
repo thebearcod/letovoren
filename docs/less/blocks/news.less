@@ -1,0 +1,26 @@
+.news {
+  position: relative;
+  min-height: 300px;
+  color: @bg-darkgrey;
+  background-color: @bg-lightgrey;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -35px;
+    left: 0;
+    z-index: 3;
+
+    height: 35px;
+
+    background-image: url("../img/corner-dark.svg");
+
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+  }
+}
+
+.news__wrapper {
+  padding-top: 70px;
+}

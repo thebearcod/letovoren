@@ -1,0 +1,120 @@
+.advantages {
+  display: block;
+  position: relative;
+  min-height: 420px;
+  color: #ffffff;
+  background-color: @bg-darkgrey;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -35px;
+    left: 0;
+    z-index: 3;
+
+    height: 35px;
+
+    background-image: url("../img/corner-dark.svg");
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+  }
+}
+
+.advantages__wrapper {
+  padding-top: 20px;
+  .container;
+}
+
+.advantages__items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.advantages__item {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 100px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 95px;
+    height: 92px;
+
+    transform: translateX(-50%);
+  }
+
+  &--fast::before {
+    background: no-repeat url("../img/advantage-icon-fast.svg");
+  }
+
+  &--safe::before {
+    background: no-repeat url("../img/advantage-icon-safe.svg");
+  }
+
+  &--quality::before {
+    background: no-repeat url("../img/advantage-icon-quality1.svg");
+  }
+}
+
+.advantages__item-title {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+@media (max-width: @mobile-width-only) {
+  .advantages__item {
+    display: none;
+  }
+
+  .advantages__toggles {
+    position: absolute;
+    width: 76px;
+    height: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #advantages__input--fast:checked ~ .advantages__toggles label[for="advantages__input--fast"],
+  #advantages__input--safe:checked ~ .advantages__toggles label[for="advantages__input--safe"],
+  #advantages__input--quality:checked ~ .advantages__toggles label[for="advantages__input--quality"] {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  #advantages__input--fast:checked ~ .advantages__items .advantages__item--fast,
+  #advantages__input--safe:checked ~ .advantages__items .advantages__item--safe,
+  #advantages__input--quality:checked ~ .advantages__items .advantages__item--quality {
+    display: block;
+  }
+}
+
+@media (min-width: @table-width) {
+  .advantages__items {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // align-items: center;
+  }
+
+  .advantages__item {
+    padding: 0;
+    padding-left: 128px;
+    text-align: left;
+    border-bottom: 1px solid #4a4a4a;
+
+
+    &::before {
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }
+}

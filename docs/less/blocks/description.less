@@ -1,0 +1,132 @@
+.description {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  margin-top: -85px;
+  padding-bottom: 35px;
+  // padding-top: 100px;
+
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  // border: 1px solid rgba(255, 255, 255, 0.4);
+  // box-sizing: border-box;
+  background-color: @bg-darkgrey;
+  // background-image: url("../img/bg-table.jpg");
+  background-image: url("../img/kim-tablet.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  // z-index: -5;
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   right: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   z-index: 3;
+  //
+  //   height: 35px;
+  //   // background-image: url("../img/corner-dark.svg");
+  //   background-image: url("../img/corner-double-dark.svg");
+  //   background-repeat: no-repeat;
+  // }
+}
+
+.description__wrapper {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  .container;
+}
+
+.description p {
+  margin: 0;
+  padding: 0;
+}
+
+.description__title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.description .description__desc {
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 20px;
+}
+
+.description__price {
+
+  margin-bottom: 20px;
+  // display: block;
+  // padding-top: 50px;
+  // font-size: 18px;
+  // font-weight: bold;
+  // text-transform: uppercase;
+}
+
+.description a {
+  // position: relative;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  text-decoration: none;
+  // z-index: 6;
+}
+
+.description .btn {
+  display: block;
+  width: 160px;
+  margin-top: 20px;
+  // margin-bottom: 10px;
+  padding: 10px 10px 10px 10px;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  font-weight: bold;
+  transition: border-color 0.2s linear, background-color 0.2s linear, color 0.3s linear;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    border-color: #545454;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #252525;
+    border-color: #252525;
+  }
+}
+
+@media (min-width: @table-width) {
+  .description {
+    margin-top: -298px;
+    padding-top: 250px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description {
+
+    background-image: url("../img/kim-desktop.jpg");
+    background-position: 0 -400px;
+    // background-size: contain;
+  }
+}
