@@ -5,7 +5,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 400px;
+  // min-height: 768px;
+  min-height: 100vh;
   margin-top: -85px;
   padding-bottom: 35px;
   // padding-top: 100px;
@@ -45,13 +46,39 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 80px;
+  // padding-top: 80px;
   .container;
 }
 
 .description p {
   margin: 0;
   padding: 0;
+}
+
+.description__card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 10px 25px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  // color: #000000;
+  // background-color: rgba(255, 255, 255, 0.9);
+  //
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //
+  //   top: 15px;
+  //   left: -15px;
+  //   border: 15px solid transparent;
+  //   border-bottom-color: rgba(255, 255, 255, 0.9);
+  //   transform: rotate(45deg);
+  // }
 }
 
 .description__title {
@@ -81,44 +108,22 @@
 }
 
 .description a {
-  // position: relative;
-  margin: 0;
-  padding: 0;
   color: #ffffff;
-  text-decoration: none;
-  // z-index: 6;
 }
 
 .description .btn {
-  display: block;
-  width: 160px;
   margin-top: 20px;
-  // margin-bottom: 10px;
-  padding: 10px 10px 10px 10px;
-  color: #000000;
-  background-color: rgba(255, 255, 255, 0.8);
-
-  font-weight: bold;
-  transition: border-color 0.2s linear, background-color 0.2s linear, color 0.3s linear;
-  text-align: center;
-
-  &:hover,
-  &:focus {
-    border-color: #545454;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-
-    background-color: #252525;
-    border-color: #252525;
-  }
 }
 
 @media (min-width: @table-width) {
   .description {
     margin-top: -298px;
-    padding-top: 250px;
+    padding-top: 80px;
+  }
+
+  .description__title {
+    font-size: 80px;
+    line-height: 80px;
   }
 }
 
@@ -128,5 +133,10 @@
     background-image: url("../img/kim-desktop.jpg");
     background-position: 0 -400px;
     // background-size: contain;
+  }
+
+  .description__title {
+    font-size: 100px;
+    line-height: 100px;
   }
 }

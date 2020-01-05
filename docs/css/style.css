@@ -67,6 +67,30 @@ main {
     margin: 0 auto;
   }
 }
+.btn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 70px 10px 70px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #e5ddd5;
+  -webkit-transition: border 0.1s linear, background-color 0.2s linear, color 0.2s linear;
+  transition: border 0.1s linear, background-color 0.2s linear, color 0.2s linear;
+}
+.btn:hover,
+.btn:focus {
+  border-color: #d5c9bd;
+}
+.btn:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #d5c9bd;
+}
+.btn a {
+  text-decoration: none;
+}
 .page-header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -366,7 +390,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 400px;
+  min-height: 100vh;
   margin-top: -85px;
   padding-bottom: 35px;
   color: #ffffff;
@@ -395,7 +419,6 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 80px;
   width: 100%;
   margin: 0 auto;
 }
@@ -411,6 +434,26 @@ main {
 .description p {
   margin: 0;
   padding: 0;
+}
+.description__card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 25px;
+  padding: 20px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .description__title {
   margin: 0;
@@ -430,42 +473,29 @@ main {
   margin-bottom: 20px;
 }
 .description a {
-  margin: 0;
-  padding: 0;
   color: #ffffff;
-  text-decoration: none;
 }
 .description .btn {
-  display: block;
-  width: 160px;
   margin-top: 20px;
-  padding: 10px 10px 10px 10px;
-  color: #000000;
-  background-color: rgba(255, 255, 255, 0.8);
-  font-weight: bold;
-  -webkit-transition: border-color 0.2s linear, background-color 0.2s linear, color 0.3s linear;
-  transition: border-color 0.2s linear, background-color 0.2s linear, color 0.3s linear;
-  text-align: center;
-}
-.description .btn:hover,
-.description .btn:focus {
-  border-color: #545454;
-}
-.description .btn:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #252525;
-  border-color: #252525;
 }
 @media (min-width: 768px) {
   .description {
     margin-top: -298px;
-    padding-top: 250px;
+    padding-top: 80px;
+  }
+  .description__title {
+    font-size: 80px;
+    line-height: 80px;
   }
 }
 @media (min-width: 1200px) {
   .description {
     background-image: url("../img/kim-desktop.jpg");
     background-position: 0 -400px;
+  }
+  .description__title {
+    font-size: 100px;
+    line-height: 100px;
   }
 }
 .advantages {
