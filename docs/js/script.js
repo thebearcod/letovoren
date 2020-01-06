@@ -30,6 +30,13 @@ var calculateScrolled = function() {
   }
 }
 
+// const swipeAdvantages = function () {
+  // let sliderAdv = document.querySelector('.advantages');
+  // sliderAdv.addEventListener('touchmove', function() {
+  //
+  // }
+// }
+
 window.addEventListener('scroll', function() {
   calculateScrolled();
 });
