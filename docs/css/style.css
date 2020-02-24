@@ -709,13 +709,25 @@ main {
   left: 0;
   z-index: 3;
   height: 35px;
+  max-width: 100%;
   background-image: url("../img/corner-dark.svg");
   background-repeat: no-repeat;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 .news__wrapper {
+  width: 100%;
+  margin: 0 auto;
   padding-top: 70px;
+}
+@media (min-width: 768px) {
+  .news__wrapper {
+    width: 81%;
+    /* 640px / 768px ~= 84% */
+    max-width: 1200px;
+    /* 960px / 0.84 ~= 1142px (центровка начнется чуть раньше 1200px*/
+    margin: 0 auto;
+  }
 }
 .reviews {
   position: relative;
@@ -737,6 +749,19 @@ main {
   background-repeat: no-repeat;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.reviews__wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .reviews__wrapper {
+    width: 81%;
+    /* 640px / 768px ~= 84% */
+    max-width: 1200px;
+    /* 960px / 0.84 ~= 1142px (центровка начнется чуть раньше 1200px*/
+    margin: 0 auto;
+  }
 }
 .page-footer {
   padding-top: 50px;
