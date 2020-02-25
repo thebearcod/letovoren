@@ -717,6 +717,7 @@ main {
 .news__wrapper {
   width: 100%;
   margin: 0 auto;
+  padding: 10px;
   padding-top: 70px;
 }
 @media (min-width: 768px) {
@@ -752,6 +753,7 @@ main {
 .reviews__wrapper {
   width: 100%;
   margin: 0 auto;
+  padding: 10px;
 }
 @media (min-width: 768px) {
   .reviews__wrapper {
