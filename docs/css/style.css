@@ -10,6 +10,12 @@
   font-style: normal;
   src: url("../fonts/PTSansNarrow-Bold.woff2") format("woff2"), url("../fonts/PTSansNarrow-Bold.woff") format("woff");
 }
+@font-face {
+  font-weight: normal;
+  font-family: "Truth CYR Regular";
+  font-style: normal;
+  src: url("../fonts/TruthCYR-Regular.woff2") format("woff2"), url("../fonts/TruthCYR-Regular.woff") format("woff");
+}
 html,
 body {
   height: 100%;
@@ -702,6 +708,7 @@ main {
   background-color: #f8f5f2;
 }
 .news::after {
+  display: none;
   content: "";
   position: absolute;
   right: 0;
@@ -727,6 +734,86 @@ main {
     max-width: 1200px;
     /* 960px / 0.84 ~= 1142px (центровка начнется чуть раньше 1200px*/
     margin: 0 auto;
+  }
+}
+.cards__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card {
+  margin-bottom: 20px;
+  width: 310px;
+  height: 400px;
+  background-color: #ffffff;
+  -webkit-box-shadow: ;
+          box-shadow: ;
+}
+.card:last-child {
+  margin-bottom: 0;
+}
+.card a {
+  text-decoration: none;
+}
+.card__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+}
+.card__top-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card__top-logo img {
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.card__top-logo p {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Truth CYR Regular", "Arial", sans-serif;
+  font-size: 14px;
+}
+.card__photo {
+  padding: 0 5px;
+}
+.card__action img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .cards__row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .card {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .card:last-child {
+    margin-bottom: 20px;
   }
 }
 .reviews {
@@ -913,6 +1000,9 @@ main {
   .page-footer__contacts a:active {
     background-color: transparent;
   }
+  .page-footer .btn {
+    margin-top: 26px;
+  }
   .page-footer__social {
     margin: 0;
     padding: 0;
@@ -944,6 +1034,12 @@ main {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .page-footer .btn {
+    margin-top: 10px;
+  }
+  .page-footer__contacts {
+    margin: 0;
   }
   .page-footer__social {
     display: block;
