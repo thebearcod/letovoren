@@ -753,11 +753,15 @@ main {
   width: 310px;
   height: 400px;
   background-color: #ffffff;
-  -webkit-box-shadow: ;
-          box-shadow: ;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 .card:last-child {
   margin-bottom: 0;
+}
+.card:hover {
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .card a {
   text-decoration: none;
