@@ -1,7 +1,9 @@
 <?
 
 // замените на свой Access Token
-$access_token = 'AQDhL7qmfsdZixPPbCy30rw1DNbfMTX9vLW7AxMK5VOxjpsz9zm1AzotNuDykEQLwNhp44J-hXtAYRPWi32EdMXf1a343HvUJWTrzjRRwSO2lT5thdxVjK1rxkIHkQy0_sKTKway3KPiWQEJyW0-RzjbK6Y5bcAdPVmzP1NVJn1b40nP90FuPDX1jMF7gQiqw4T1gNkP70yBPlu-_09TBCfV4gtjUzk8Nu68V90NSn2HFw#_';	
+// $access_token = '';	
+
+$access_token = '';	
 
 // функция, которая вытягивает из инсты нужную инфу 
 function GetDataFromInstagram($access_token)
